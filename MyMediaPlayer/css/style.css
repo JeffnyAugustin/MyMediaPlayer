@@ -1,0 +1,121 @@
+@import "font-awesome";
+
+
+* {
+   padding: 0;
+   margin: 0;
+   outline: none;
+   color: #ffffff;
+   font-family: "Roboto Mono", monospace;
+}
+
+
+
+body {
+   background-image: url("/media/img9.jpg");
+   background-size: cover;
+   background-repeat: no-repeat;
+   max-width: 100%;
+}
+
+h1 {
+   font-size: 80px;
+   font-weight: 900;
+   text-align: center;
+}
+
+
+.player {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+}
+
+
+ .controls__button {
+    background: none;
+    border: 0;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+    max-width: 50px;
+  }
+  .controls__slider {
+    width: 10px;
+    height: 30px;
+  }
+  .controls {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.1);
+    transform: translateY(0);
+  }
+  .controls > * {
+    flex: 1;
+  }
+  .progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 5px;
+    /* background: rgba(0,0,0,0.5); */
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    height: 15px;
+  }
+  .progress__filled {
+    width: 50%;
+    background: #00ff40;
+    flex: 0;
+    flex-basis: 0%;
+  }
+  
+  input[type=range] {
+
+    background: transparent;
+    width: 100%;
+    margin: 0 5px;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.8);
+    border-radius: 4px;
+  }
+  input[type=range]::-webkit-slider-thumb {
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 50px;
+    background: #00ff40;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -3.5px;
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: rgba(255,255,255,0.8);
+    border-radius: 4px;
+  }
+  input[type=range]::-moz-range-thumb {
+    height: 0.9rem;
+    width: 0.9rem;
+    border-radius: 50px;
+    background: #00ff40;
+    cursor: pointer;
+    margin-top: -3.5px;
+  }
+  
