@@ -23,7 +23,7 @@ body {
 }
 
 #titre {
-    color : whitesmoke;
+    color: whitesmoke;
     font-size: 80px;
     font-weight: 900;
     line-height: 92px;
@@ -54,7 +54,7 @@ video#mediaVideo {
     flex-direction: row;
     justify-content: space-around;
     background-color: #000000;
-    height: 30px;
+    height: 41px;
     width: 1241px;
     position: absolute;
     top: 841px;
@@ -76,7 +76,7 @@ video#mediaVideo {
     order: 1;
     position: absolute;
     width: 100%;
-    top: -1.25rem;
+    top: -0.3rem;
 }
 
 #play {
@@ -103,6 +103,23 @@ video#mediaVideo {
 
 }
 
+#sound {
+    display: flex;
+    flex-direction: row;
+
+}
+
+#btnSound {
+    font-size: 18px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    display: block;
+    position: absolute;
+    left: 55rem;
+    bottom: 0.5rem;
+}
+
 #skipForward {
     font-size: 18px;
     background-color: transparent;
@@ -127,7 +144,8 @@ video#mediaVideo {
     color: white;
     display: block;
     position: absolute;
-    right: 9rem; 
+    right: 10.2rem;
+    bottom: 0.5rem;
 }
 
 input#upload {
