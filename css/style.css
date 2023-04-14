@@ -23,6 +23,7 @@ body {
 }
 
 #titre {
+    color : whitesmoke;
     font-size: 80px;
     font-weight: 900;
     line-height: 92px;
