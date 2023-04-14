@@ -50,6 +50,13 @@ progressBar.value = "0";
 
 // Création bouton volume
 
+const divSound = document.createElement("div");
+divSound.id = 'sound';
+
+const btnSound = document.createElement("button");
+btnSound.id = 'btnSound';
+btnSound.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+
 
 const volume = document.createElement('input');
 volume.id = "volume";
@@ -58,7 +65,6 @@ volume.min = '0';
 volume.max = '1';
 volume.step = '0.1'
 volume.value = "1";
-volume.innerHTML = '<i class="fa-solid fa-pause"></i>';
 
 console.log(volume.step);
 
@@ -84,7 +90,9 @@ uploadbtn.textContent = "Parcourir";
 
 
 // Aller du container vers les enfants
-divBttn.append(btnPlay, btnBackward, progressBar, volume, btnFullscreen, uploadbtn, btnForward, );
+
+divBttn.append(btnPlay, btnBackward, progressBar, divSound, btnFullscreen, uploadbtn, btnForward );
+divSound.append(btnSound, volume)
 videoContain.appendChild(videoPlay);
 container.append(title, videoContain, divBttn);
 // pour faire appel au dom, .body pour injecter dans le body
@@ -140,6 +148,25 @@ volume.addEventListener("input", () => {
 
 })
 
+// Bouton volume
+
+volume.addEventListener("change", () => {
+    if (volume.value >= 0.5) {
+        btnSound.innerHTML = '<i class="fa-solid fa-volume-high"></i>';
+       
+    }
+
+
+    else if (volume.value >= 0.1) {
+        btnSound.innerHTML = '<i class="fa-solid fa-volume-low"></i>';
+        
+    }
+
+    else if (volume.value == 0){
+        btnSound.innerHTML = '<i class="fa-solid fa-volume-xmark"></i>';
+    }
+})
+
 // Bouton Plein d'écran
 
 btnFullscreen.addEventListener("click", () => {
@@ -181,4 +208,3 @@ inputUpload.addEventListener('change', function(event) {
 
     
 })
-
